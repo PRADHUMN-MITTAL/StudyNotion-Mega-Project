@@ -48,8 +48,8 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
         console.log("PRINTING orderResponse", orderResponse);
         //options
         const options = {
-            // key: process.env.RAZORPAY_KEY,
-            key: "rzp_test_3pJer4d2b1Uiwu",
+            key: process.env.RAZORPAY_KEY,
+            // key: "rzp_test_k6PHlZDB3BbmRv",
             currency: orderResponse.data.message.currency,
             amount: `${orderResponse.data.message.amount}`,
             order_id:orderResponse.data.message.id,
